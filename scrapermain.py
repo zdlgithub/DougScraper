@@ -1,6 +1,6 @@
 
 from doughtmlparse import DougHtmlParse
-import os, settings, datetime
+import os, settings, datetime, time
 
 
 if __name__ == '__main__':
@@ -17,9 +17,12 @@ if __name__ == '__main__':
     print(line_strings)
     pfs = open(product_file_path,'a+', encoding='utf-8')
     cfs=open(combination_file_path, 'a+', encoding='utf-8')
+    product_id =''
     for ls in line_strings:
         try:
             urls = ls.split(';')
+            product_id = urls[0]
+            print('ProductID: %s begin' % product_id)
             dhp = DougHtmlParse()
             html_text = dhp.get_product_info(urls[0],urls[1],urls[2])
         except Exception as e:
@@ -29,5 +32,9 @@ if __name__ == '__main__':
         pfs.write('\n' + html_text[0])
         for ht in html_text[1]:
             cfs.write('\n' + ht)
+
+        print('ProductID:' + product_id + ' sleep 5s.................................................')
+        time.sleep(5)
+
     pfs.close()
     cfs.close()

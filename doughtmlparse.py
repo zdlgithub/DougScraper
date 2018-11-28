@@ -37,7 +37,7 @@ class DougHtmlParse(object):
 
         soup=BeautifulSoup(html_text)
         # 取得标题
-        head_title=soup.title.string.replace(settings.ALIEXPRESS_DOMAIN, settings.MY_DOMAIN)
+        head_title=re.sub(settings.ALIEXPRESS_DOMAIN, settings.MY_DOMAIN, soup.title.string)
         print('headTitle:', head_title)
 
         # 取得关键词
@@ -45,9 +45,8 @@ class DougHtmlParse(object):
         print('meta_keywords:', meta_keywords)
 
         # 取得描述
-        meta_desc=soup.find('meta', attrs={'name': 'description'})['content'].replace(settings.ALIEXPRESS_DOMAIN,
-                                                                                      settings.MY_DOMAIN).replace('\n',
-                                                                                                                  ' ')
+        meta_desc = soup.find('meta', attrs={'name': 'description'})['content'].replace('\n', ' ')
+        meta_desc = re.sub(settings.ALIEXPRESS_DOMAIN, settings.MY_DOMAIN, meta_desc)
         print('meta_desc:', meta_desc)
 
         # 产品标题
@@ -55,7 +54,7 @@ class DougHtmlParse(object):
         print('product_name:', product_name.string)
 
         # 过滤掉产品中的物殊字符
-        rewriteurl=re.sub(r'[\+":/&#]+', ' ', product_name.string).lower()
+        rewriteurl=re.sub(r'[+":/&?#()*^,)]+', ' ', product_name.string).lower()
         # 查找产品价格及价格折扣
         product_price=soup.find('span', id='j-sku-price').get_text()
         print(product_price)
@@ -123,7 +122,7 @@ class DougHtmlParse(object):
                     pass
             attrs_array.append(dllis)
         print(attrs_array)
-        attr_values_array=reduce(get_attr_content, attrs_array)
+        attr_values_array=reduce(get_attr_content, attrs_array) if len(attrs_array) > 0 else []
         attr_products=[]
         n=0
         for v in attr_values_array:
@@ -153,10 +152,10 @@ class DougHtmlParse(object):
             features+=spans.replace('\n', '').replace(',','，') + ':' + str(lin) + ','
         features=features.rstrip(',')
 
-        print('features', features)
+        # print('features', features)
         # pdesc = soup.select('div.product-video-main,div.product-description-main')
         pdescvideo=soup.find('div', class_='product-video-main')
-        print(pdescvideo)
+        # print(pdescvideo)
 
         pdesc=soup.find('div', class_='product-description-main')
         kses=pdesc.find_all('kse:widget')
@@ -167,7 +166,7 @@ class DougHtmlParse(object):
         # print(pdesc)
 
         package=soup.find('div', class_='pnl-packaging-main')
-        print(str(package))
+        # print(str(package))
         pattern=re.compile(r'(\d+|\d+\.\d+)([cm]+)')
         result1=pattern.findall(str(package))
         width=result1[0][0]
