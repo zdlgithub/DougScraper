@@ -17,8 +17,8 @@ LIBRARY_BASE_PATH = os.path.join(BASE_DIR,'library')
 
 SCRAPER_SLEEP_TIME = 5
 
-MY_DOMAIN = 'Athereshopping'
-ALIEXPRESS_DOMAIN = 'Aliexpress'
+MY_DOMAIN = 'Athereshopping.com'
+ALIEXPRESS_DOMAIN = 'Aliexpress.com | Alibaba Group'
 
 
 @unique
