@@ -55,6 +55,7 @@ class DougHtmlParse(object):
 
         # 过滤掉产品中的物殊字符
         rewriteurl=re.sub(r'[+":/&?#()*^,)]+', ' ', product_name.string).lower()
+        rewriteurl=re.sub(r'[ ]+', '-', rewriteurl)
         # 查找产品价格及价格折扣
         product_price=soup.find('span', id='j-sku-price').get_text()
         print(product_price)
@@ -200,8 +201,7 @@ class DougHtmlParse(object):
                        '\;\;\;\;' + \
                        'P' + product_id + '\;' + supplier_ref + '\;' + supplier + '\;' + manufacturer + '\;' + ean_13 + '\;' + upc + '\;0\;' + \
                        width + '\;' + height + '\;' + depth + '\;' + weight + '\;\;\;1000\;1\;2\;\;0\;0\;\;\;' + \
-                       short_desc + '\;' + product_desc + '\;\;' + head_title + '\;' + meta_keywords + '\;' + meta_desc + '\;' + rewriteurl.replace(
-            ' ', '-') + '\;' + \
+                       short_desc + '\;' + product_desc + '\;\;' + head_title + '\;' + meta_keywords + '\;' + meta_desc + '\;' + rewriteurl + '-' + product_id + '\;' + \
                        '\;\;1\;\;' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '\;1\;' + \
                        ','.join(product_images) + '\;' + ','.join(
             product_images_alt_text) + '\;0\;' + features + '\;0\;new\;' + \
