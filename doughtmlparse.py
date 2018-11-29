@@ -128,15 +128,15 @@ class DougHtmlParse(object):
         n=0
         for v in attr_values_array:
             n+=1
-            attr_ref=re.sub(r':\d\,|:\d', ' ', v[0]).replace(' ', '-') + attr_reference
-            attr_img_pos = '' if len(v) == 1 else v[1]
-            attr_img_pos = (attr_img_pos + ',' + img_pos_str) if n == 1 else attr_img_pos
+            attr_ref=re.sub(r':\d+\,|:\d+|[ ]+', '-', v[0]) + attr_reference
+            attr_img_pos = '' if len(v) == 1 else str(v[1])
+            attr_img_pos = (attr_img_pos + ',' + str(img_pos_str)) if n == 1 else attr_img_pos
             # Product ID*;Product Reference;Attribute (Name:Type:Position)*;Value (Value:Position)*;v[0].replace(',','-')
             # Supplier reference;Reference;EAN13;UPC;#Wholesale price;Impact on price;Ecotax;Quantity;Minimal quantity;Low stock level;Low stock alert;
             # Impact on weight;Default (0 = No, 1 = Yes);Combination available date;
             # Image position;Image URLs (x,y,z...);Image alt texts (x,y,z...);ID / Name of shop;Advanced Stock Managment;Depends on stock;Warehouse
             attr_string=product_id + '\;' + 'P' + product_id + '\;' + attr_names + '\;' + v[0] + '\;' + \
-                        supplier_ref + '\;' + attr_ref + '\;' + ean_13 + '\;' + upc + '\;0\;0\;0\;0\;0\;0\;0\;' + \
+                        supplier_ref + '\;' + attr_ref + '\;' + ean_13 + '\;' + upc + '\;0\;0\;0\;9999\;1\;2\;0\;' + \
                         '0\;' + ('1\;' if n == 1 else '0\;') + '2999-12-31\;' + attr_img_pos + '\;\;\;1\;0\;0\;0\;'
             attr_products.append(attr_string)
 
@@ -178,7 +178,7 @@ class DougHtmlParse(object):
         result1=pattern.findall(str(package))
         weight=result1[0][0]
 
-        product_desc=(str(psummary) + str(pdescvideo) + str(pdesc) + str(package)).replace('\n', '')
+        product_desc=(str(psummary) + ('' if str(pdescvideo)==None else str(pdescvideo)) + str(pdesc) + str(package)).replace('\n', '')
         product_desc=re.sub(r'data\-[\w\-="\.]*', '', product_desc)
 
         # 产品中的图片
@@ -200,7 +200,7 @@ class DougHtmlParse(object):
                        product_price + '\;' + '\;' + '0\;1\;' + \
                        '\;\;\;\;' + \
                        'P' + product_id + '\;' + supplier_ref + '\;' + supplier + '\;' + manufacturer + '\;' + ean_13 + '\;' + upc + '\;0\;' + \
-                       width + '\;' + height + '\;' + depth + '\;' + weight + '\;\;\;1000\;1\;2\;\;0\;0\;\;\;' + \
+                       width + '\;' + height + '\;' + depth + '\;' + weight + '\;\;\;9999\;1\;2\;\;0\;0\;\;\;' + \
                        short_desc + '\;' + product_desc + '\;\;' + head_title + '\;' + meta_keywords + '\;' + meta_desc + '\;' + rewriteurl + '-' + product_id + '\;' + \
                        '\;\;1\;\;' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '\;1\;' + \
                        ','.join(product_images) + '\;' + ','.join(
