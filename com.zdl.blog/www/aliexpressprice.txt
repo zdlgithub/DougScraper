@@ -1,0 +1,83 @@
+
+		if(!window.runParams) {
+		window.runParams = {};
+		}
+		window.runParams.minPrice="188.49";
+		window.runParams.maxPrice="211.99";
+		window.runParams.baseCurrencyCode="USD";
+		window.runParams.baseCurrencySymbol="US $";
+		window.runParams.baseSymbolFront=true;
+		window.runParams.isGroupJoin="";
+        window.runParams.abMzcVersion="";
+        window.runParams.isCoinPreSale="";
+        window.runParams.applyScene="";
+        window.runParams.atLeastCoinEnough = "";
+        window.runParams.miniCoinNeed = "";
+        window.runParams.isOpenBanner="";
+				window.runParams.pageSizeID="";
+		window.runParams.pageSizeType="";
+		window.runParams.hasSizeInfo=false;
+		window.runParams.pageSizeTemplate='';
+		window.runParams.pageSizeBuyerData='';
+				    window.runParams.pageSizeSellerData={};
+        
+                    window.runParams.title={};
+        
+        window.runParams.isNewSizeInfo=false;
+		window.runParams.offline=false;
+		window.runParams.csrfToken="611wrgbx8m0h";
+		window.runParams.productId="32922922504";
+        window.runParams.serverTime="1542359364362";
+		window.runParams.userCountry="CN";
+		window.runParams.userCountryName="China";
+		window.runParams.regionCountryName="United States";
+		window.runParams.regionProvinceName="";
+		window.runParams.regionCityName="";
+        window.runParams.sessionId="f51531d4fc4b4499838da68d78ce1681";
+				window.runParams.currencyCode="USD";
+		window.runParams.currencySymbol="US $";
+		window.runParams.currencyRate="1.0";
+		window.runParams.symbolFront=true;
+		window.runParams.currencyTransaction=true;
+				
+	
+				window.runParams.isPreSaleActivity=false;
+	
+	window.runParams.actDepositMinPrice = "";
+	window.runParams.actDepositMaxPrice = "";
+
+	window.runParams.hasMobileDiscount="false";
+	window.runParams.mobileDiscountPrice="";
+
+	
+			window.runParams.totalAvailQuantity=4250;
+	window.runParams.memberPrice="";
+	window.runParams.memberPriceActivity="";
+	window.runParams.quantityLimit={
+		isPurchaseLimit: "",
+				unit: 'pieces',
+				quantityNum: '4250 ',
+		availQuantityForCustomer: '4250'
+	};
+
+			window.runParams.warrantyServiceJson=[];
+				window.runParams.forcePromiseWarrantyJson={};
+		window.runParams.hasOverseaWarehouse="false";
+
+	var skuProducts=[{"skuAttr":"200000828:200003986#Glass n Mi Earphones;14:193#Black","skuPropIds":"200003986,193","skuVal":{"availQuantity":294,"inventory":341,"isActivity":false,"skuCalPrice":"206.99","skuMultiCurrencyCalPrice":"206.99","skuMultiCurrencyDisplayPrice":"206.99"}},{"skuAttr":"200000828:200003985#Glass n NillkinCover;14:193#Black","skuPropIds":"200003985,193","skuVal":{"availQuantity":299,"inventory":329,"isActivity":false,"skuCalPrice":"209.99","skuMultiCurrencyCalPrice":"209.99","skuMultiCurrencyDisplayPrice":"209.99"}},{"skuAttr":"200000828:200003984#Glass n Nillkin Case;14:193#Black","skuPropIds":"200003984,193","skuVal":{"availQuantity":296,"inventory":347,"isActivity":false,"skuCalPrice":"208.99","skuMultiCurrencyCalPrice":"208.99","skuMultiCurrencyDisplayPrice":"208.99"}},{"skuAttr":"200000828:200003983#Glass n TPU Case;14:193#Black","skuPropIds":"200003983,193","skuVal":{"availQuantity":292,"inventory":380,"isActivity":false,"skuCalPrice":"202.99","skuMultiCurrencyCalPrice":"202.99","skuMultiCurrencyDisplayPrice":"202.99"}},{"skuAttr":"200000828:200003986#Glass n Mi Earphones;14:173#Blue","skuPropIds":"200003986,173","skuVal":{"availQuantity":297,"inventory":305,"isActivity":false,"skuCalPrice":"199.49","skuMultiCurrencyCalPrice":"199.49","skuMultiCurrencyDisplayPrice":"199.49"}},{"skuAttr":"200000828:200003985#Glass n NillkinCover;14:173#Blue","skuPropIds":"200003985,173","skuVal":{"availQuantity":296,"inventory":306,"isActivity":false,"skuCalPrice":"202.49","skuMultiCurrencyCalPrice":"202.49","skuMultiCurrencyDisplayPrice":"202.49"}},{"skuAttr":"200000828:200003984#Glass n Nillkin Case;14:173#Blue","skuPropIds":"200003984,173","skuVal":{"availQuantity":297,"inventory":307,"isActivity":false,"skuCalPrice":"201.49","skuMultiCurrencyCalPrice":"201.49","skuMultiCurrencyDisplayPrice":"201.49"}},{"skuAttr":"200000828:200003983#Glass n TPU Case;14:173#Blue","skuPropIds":"200003983,173","skuVal":{"availQuantity":295,"inventory":323,"isActivity":false,"skuCalPrice":"195.49","skuMultiCurrencyCalPrice":"195.49","skuMultiCurrencyDisplayPrice":"195.49"}},{"skuAttr":"200000828:200003986#Glass n Mi Earphones;14:1052#Rose gold","skuPropIds":"200003986,1052","skuVal":{"availQuantity":0,"inventory":0,"isActivity":false,"skuCalPrice":"208.99","skuMultiCurrencyCalPrice":"208.99","skuMultiCurrencyDisplayPrice":"208.99"}},{"skuAttr":"200000828:200003985#Glass n NillkinCover;14:1052#Rose gold","skuPropIds":"200003985,1052","skuVal":{"availQuantity":0,"inventory":0,"isActivity":false,"skuCalPrice":"211.99","skuMultiCurrencyCalPrice":"211.99","skuMultiCurrencyDisplayPrice":"211.99"}},{"skuAttr":"200000828:200003984#Glass n Nillkin Case;14:1052#Rose gold","skuPropIds":"200003984,1052","skuVal":{"availQuantity":0,"inventory":0,"isActivity":false,"skuCalPrice":"210.99","skuMultiCurrencyCalPrice":"210.99","skuMultiCurrencyDisplayPrice":"210.99"}},{"skuAttr":"200000828:200003983#Glass n TPU Case;14:1052#Rose gold","skuPropIds":"200003983,1052","skuVal":{"availQuantity":0,"inventory":0,"isActivity":false,"skuCalPrice":"204.99","skuMultiCurrencyCalPrice":"204.99","skuMultiCurrencyDisplayPrice":"204.99"}},{"skuAttr":"200000828:200003982#Official Standard;14:193#Black","skuPropIds":"200003982,193","skuVal":{"availQuantity":936,"inventory":2065,"isActivity":false,"skuCalPrice":"195.99","skuMultiCurrencyCalPrice":"195.99","skuMultiCurrencyDisplayPrice":"195.99"}},{"skuAttr":"200000828:200003982#Official Standard;14:173#Blue","skuPropIds":"200003982,173","skuVal":{"availQuantity":948,"inventory":1198,"isActivity":false,"skuCalPrice":"188.49","skuMultiCurrencyCalPrice":"188.49","skuMultiCurrencyDisplayPrice":"188.49"}},{"skuAttr":"200000828:200003982#Official Standard;14:1052#Rose gold","skuPropIds":"200003982,1052","skuVal":{"availQuantity":0,"inventory":0,"isActivity":false,"skuCalPrice":"197.99","skuMultiCurrencyCalPrice":"197.99","skuMultiCurrencyDisplayPrice":"197.99"}}];
+	        var GaData = {
+        pageType: "product",
+        productIds: "en32922922504",
+        totalValue: "US $188.49"
+    };
+
+		    window.runParams.isFixedFreeShipping=false;
+	window.runParams.fixedFreeShippingTip='';
+	window.runParams.bigSaleIconUrl='';
+	window.runParams.rmStoreLevelAB = "true";
+    
+                window.runParams.isHbaFreight=false;
+            window.runParams.hbaFreightDisplayName='';
+	window.runParams.hbaFreightLine='';
+    window.runParams.isHbaFreeShipping=false;
+    window.runParams.hbaFreeShippingTip='';

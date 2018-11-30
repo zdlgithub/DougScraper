@@ -1,0 +1,24 @@
+Product ID*;Product Reference;Attribute (Name:Type:Position)*;Value (Value:Position)*;Supplier reference;Reference;EAN13;UPC;Wholesale price;Impact on price;Ecotax;Quantity;Minimal quantity;Low stock level;Low stock alert;Impact on weight;Default (0 = No, 1 = Yes);Combination available date;Image position;Image URLs (x,y,z...);Image alt texts (x,y,z...);ID / Name of shop;Advanced Stock Managment;Depends on stock;Warehouse
+1042;P1042;Color:radio:0;bamboo color:0;;bamboo-color-P1042;;;0;0;0;9999;1;2;0;0;1;2999-12-31;,1,2,3;;;1;0;0;0;
+1043;P1043;Color:radio:0;White 30 pieces:0;;White-30-pieces-P1043;;;0;0;0;9999;1;2;0;0;1;2999-12-31;,1,2;;;1;0;0;0;
+1043;P1043;Color:radio:0;White 60 pieces:0;;White-60-pieces-P1043;;;0;0;0;9999;1;2;0;0;0;2999-12-31;;;;1;0;0;0;
+1044;P1044;Color:radio:0;Spare Blades:0;;Spare-Blades-P1044;;;0;0;0;9999;1;2;0;0;1;2999-12-31;2,1;;;1;0;0;0;
+1045;P1045;Color:radio:0;Red:0;;Red-P1045;;;0;0;0;9999;1;2;0;0;1;2999-12-31;5,1,2,3,4;;;1;0;0;0;
+1045;P1045;Color:radio:0;Blue:0;;Blue-P1045;;;0;0;0;9999;1;2;0;0;0;2999-12-31;6;;;1;0;0;0;
+1046;P1046;Color:radio:0;Red:0;;Red-P1046;;;0;0;0;9999;1;2;0;0;1;2999-12-31;3,1,2;;;1;0;0;0;
+1046;P1046;Color:radio:0;Blue:0;;Blue-P1046;;;0;0;0;9999;1;2;0;0;0;2999-12-31;4;;;1;0;0;0;
+1047;P1047;Color:radio:0;Pink:0;;Pink-P1047;;;0;0;0;9999;1;2;0;0;1;2999-12-31;,1,2;;;1;0;0;0;
+1048;P1048;Color:radio:0;Pink:0;;Pink-P1048;;;0;0;0;9999;1;2;0;0;1;2999-12-31;6,1,2,3,4,5;;;1;0;0;0;
+1049;P1049;Color:radio:0;blue:0;;blue-P1049;;;0;0;0;9999;1;2;0;0;1;2999-12-31;6,1,2,3,4,5;;;1;0;0;0;
+1049;P1049;Color:radio:0;black:0;;black-P1049;;;0;0;0;9999;1;2;0;0;0;2999-12-31;7;;;1;0;0;0;
+1050;P1050;Color:radio:0;Light Green:0;;Light-Green-P1050;;;0;0;0;9999;1;2;0;0;1;2999-12-31;3,1,2;;;1;0;0;0;
+1050;P1050;Color:radio:0;Clear:0;;Clear-P1050;;;0;0;0;9999;1;2;0;0;0;2999-12-31;4;;;1;0;0;0;
+1050;P1050;Color:radio:0;Pink:0;;Pink-P1050;;;0;0;0;9999;1;2;0;0;0;2999-12-31;5;;;1;0;0;0;
+1051;P1051;Color:radio:0;Green:0;;Green-P1051;;;0;0;0;9999;1;2;0;0;1;2999-12-31;2,1;;;1;0;0;0;
+1051;P1051;Color:radio:0;Black:0;;Black-P1051;;;0;0;0;9999;1;2;0;0;0;2999-12-31;3;;;1;0;0;0;
+1052;P1052;Color:radio:0;White Big:0;;White-Big-P1052;;;0;0;0;9999;1;2;0;0;1;2999-12-31;7,1,2,3,4,5,6;;;1;0;0;0;
+1052;P1052;Color:radio:0;White Small:0;;White-Small-P1052;;;0;0;0;9999;1;2;0;0;0;2999-12-31;8;;;1;0;0;0;
+1052;P1052;Color:radio:0;Green Big:0;;Green-Big-P1052;;;0;0;0;9999;1;2;0;0;0;2999-12-31;9;;;1;0;0;0;
+1052;P1052;Color:radio:0;Green Small:0;;Green-Small-P1052;;;0;0;0;9999;1;2;0;0;0;2999-12-31;10;;;1;0;0;0;
+1052;P1052;Color:radio:0;Pink Big:0;;Pink-Big-P1052;;;0;0;0;9999;1;2;0;0;0;2999-12-31;11;;;1;0;0;0;
+1052;P1052;Color:radio:0;Pink Small:0;;Pink-Small-P1052;;;0;0;0;9999;1;2;0;0;0;2999-12-31;12;;;1;0;0;0;

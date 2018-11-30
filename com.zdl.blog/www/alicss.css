@@ -1,0 +1,180 @@
+
+div#divpd a,div#divpd dd,div#divpd div,div#divpd dl,div#divpd dt,div#divpd h1,div#divpd h2,div#divpd h3,div#divpd h4,div#divpd h5,div#divpd h6,div#divpd li,div#divpd p,div#divpd span,div#divpd ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
+
+div#divpd audio,div#divpd canvas,div#divpd video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1
+}
+
+
+div#divpd ul {
+	list-style: disc
+}
+
+div#divpd li {
+	margin-left: 30px;
+	display: list-item
+}
+
+div#divpd dd {
+	margin: 0 0 0 40px
+}
+
+div#divpd table {
+	border-collapse: collapse
+}
+
+div#divpd caption,div#divpd td,div#divpd th {
+	font-weight: 400;
+	float: none!important
+}
+
+div#divpd p {
+	margin: 0 0 1.5em
+}
+
+div#divpd hr {
+	clear: both;
+	height: 0;
+	overflow: hidden
+}
+
+div#divpd img {
+	color: transparent;
+	font-size: 0;
+	border: 0;
+	vertical-align: middle;
+	-ms-interpolation-mode: bicubic
+}
+
+div#divpd a img {
+	border: none
+}
+
+div#divpd svg:not(:root) {
+	overflow: hidden
+}
+
+div#divpd fieldset {
+	border: 1px solid silver;
+	margin: 0 2px;
+	padding: .35em .625em .75em
+}
+
+div#divpd legend {
+	border: 0;
+	padding: 0;
+	white-space: normal;
+	*margin-left: -7px
+}
+
+div#divpd img {
+	vertical-align: middle
+}
+
+div#divpd .img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto
+}
+
+div#divpd .product-description-main .loading32 {
+	min-height: 500px
+}
+
+div#divpd .product-description-main .description-content {
+	word-break: break-word;
+	word-wrap: break-word;
+	overflow: hidden;
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box
+}
+
+div#divpd .product-description-main .description-content * {
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box
+}
+
+div#divpd .product-description-main .description-content p {
+	margin-bottom: 0
+}
+
+div#divpd .product-description-main .description-content img {
+	max-width: 100%;
+	width: auto
+}
+
+div#divpd .packaging-detail-main .ui-box-title,div#divpd .pnl-packaging-main .ui-box-title,div#divpd .product-description-main .ui-box-title,div#divpd .product-property-main .ui-box-title {
+	background-color: #e9e9e9;
+	padding: 8px 0 8px 15px;
+	font-size: 14px
+}
+
+div#divpd .product-video-main .ui-box-body {
+	text-align: center;
+	padding: 10px 0
+}
+
+div#divpd .product-property-list {
+	padding: 10px 0
+}
+
+div#divpd .product-property-list li {
+	position: relative;
+	width: 50%;
+	float: left;
+	line-height: 16px;
+	padding: 5px 0;
+	list-style: none;
+	margin-left: 0
+}
+
+div#divpd .product-property-list li .propery-title {
+	float: left;
+	color: #999;
+	margin-right: 3px
+}
+
+div#divpd .product-property-list li .propery-des {
+	float: left;
+	max-width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+div#divpd .product-packaging-list {
+	padding: 10px 0
+}
+
+div#divpd .product-packaging-list li {
+	position: relative;
+	width: 50%;
+	float: left;
+	line-height: 16px;
+	padding: 5px 0;
+	list-style: none;
+	margin-left: 0
+}
+
+div#divpd .product-packaging-list li .packaging-title {
+	color: #999
+}
+
+div#divpd .product-description-main .ui-box-body {
+	padding: 15px 0
+}
+
+div#divpd .multi-lang-switch-desc,div#divpd .transplate-detail-tips {
+	margin-bottom: 10px
+}
