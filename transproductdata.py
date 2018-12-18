@@ -49,6 +49,7 @@ try:
         features=''
         description = (description + specification).replace('\n', '')
         description=re.sub('href="http://www.dx.com/p/[\w#-.]*"', 'href="#"',description)
+        description=re.sub('<iframe[\w=/.:*;%?# &"\->]*</iframe>', '',description)
         desreplace = 'All packages from DX.com are sent without DX logo or any information indicating DX.com. Due to package variations from suppliers, the product packaging customers receive may be different from the images displayed.'
         description= description.replace(desreplace, '').replace('dx.com','athereshoppin.com')
         product_images = pic_large.replace('/productimages','https://partner.img.dxcdn.com/productimages').replace('/sbnimages','https://photo.volumerate.com/sbnimages').replace(';',',')
