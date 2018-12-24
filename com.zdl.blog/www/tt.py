@@ -1,6 +1,18 @@
 import os
 
 
+print('ll' in 'Helllo')
+
+
+
+ta=[1,2,0,3,4]
+for a in ta:
+	try:
+		print(1/a)
+	except Exception as e:
+		print('error')
+
+
 aa=['a','b','c','d']
 aa.insert(1,'e')
 print(aa)
