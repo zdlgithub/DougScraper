@@ -37,6 +37,7 @@ if __name__ == '__main__':
         ws.append(html_text)
 
         print('ProductID:' + product_id + ' sleep 5s.................................................')
-        time.sleep(5)
+        time.sleep(1)
 
-    ws.save('shopee_products_'+current_datetime+'.xlsx')
+    wb.save('shopee_products_'+current_datetime+'.xlsx')
+    wb.close()

@@ -15,7 +15,7 @@ def get_attr_content(aa, bb):
             ctemp.append(tmp0)
             tmp1=''
             if len(a) > 1 and len(b) > 1:
-                tmp1=a[1] + ',' + b[1]
+                tmp1=a[1] + ' ' + b[1]
             elif len(a) > 1:
                 tmp1=a[1]
             elif len(b) > 1:
@@ -31,20 +31,25 @@ class DougHtmlParse(object):
 
     # 整理资料格式product_id;category_name;url
     def get_product_info(self, product_id, category_name,exclude_img, web_page_url):
-        sb=ScraperBrowser()
-        sb.web_page_url=web_page_url
-        html_text=sb.get_html_text()
+        # sb=ScraperBrowser()
+        # sb.web_page_url='file:///D:/python/PycharmProjects/DougDataScraper/ali1688html/10001.html'
+        # html_text=sb.get_html_text()
         exclude_imgs = []
-        if not exclude_img:
+        if exclude_img:
             exclude_imgs = exclude_img.split(',')
-        soup=BeautifulSoup(html_text)
+        print('exclude_imags:',exclude_imgs)
+        fp = open('ali1688html/'+product_id+'.html', encoding='gbk')
+        soup=BeautifulSoup(fp)
 
-        shopee_product=map(lambda x:None,range(1,78))
+        shopee_product=[]
+        for r in range(78):
+            shopee_product.append(None)
+        print('shopee_product_len:',len(shopee_product))
         shopee_product[0]=category_name
         # 产品标题
         productname=soup.find('h1', class_='d-title')
         # print('productname:', productname.get_text())
-        shopee_product[1]=category_name
+        shopee_product[1]=productname.get_text()
 
         # 查找产品描述
         # psummary=soup.select('div.product-property-main')
@@ -62,20 +67,20 @@ class DougHtmlParse(object):
         product_desc=reduce(lambda x, y: x + y,
                             map(lambda x: x + ':' if tds.index(x) % 2 == 0 and x else x + '\n', tds))
         # print(product_desc)
-        shopee_product[2]=product_desc
+        shopee_product[2]=re.sub('''建议零售价:¥[\d]+[.]*[\d]*[\n]*|主要下游平台:[\w,]+[\n]*|主要销售地区:[\w,]*[\n]*|是否跨境货源:[\w]+[\n]*|通讯类型:[\w]+[\n]*|加工定制:[\w]+[\n]*|加工方式:[\w]+[\n]*|加印LOGO:[\w]+[\n]*|是否支持混批:[\w]+[\n]*|是否支持一件代发:[\w,]+[\n]*|发票:[\w]+[\n]*''','',product_desc)
         shopee_product[6]=3
         shopee_product[7]=product_id
         # 查找产品价格及价格折扣
-        pricetag=soup.find('span', class_='value price-length-6')
-        # print(pricetag)
-        if not pricetag:
-            pricetag=soup.find('div', class_='price-original-sku')
-        # print(pricetag)
-        productprice=pricetag.get_text()
-        if productprice.find('-') < 0:
-            print('productprice:', productprice)
-        else:
-            print('productprice[]:', productprice.split('-')[1].strip())
+        # pricetag=soup.find('span', class_='value price-length-6')
+        # # print(pricetag)
+        # if not pricetag:
+        #     pricetag=soup.find('div', class_='price-original-sku')
+        # # print(pricetag)
+        # productprice=pricetag.get_text()
+        # if productprice.find('-') < 0:
+        #     print('productprice:', productprice)
+        # else:
+        #     print('productprice[]:', productprice.split('-')[1].strip())
 
         # 查找产品attibutes及attributes相应的价格
         attrscontent={}
@@ -155,14 +160,21 @@ class DougHtmlParse(object):
             productimages.append(imgurl)
         print(productimages)
         mi = 1
+        mb = 1
         for img in productimages:
             #判断是否要去掉此图片
-            if mi in exclude_imgs:
+            if str(mi) in exclude_imgs:
+                #print('Imgs:', mi, '-', exclude_imgs)
+                mi+=1
                 continue
-            if mi>9:
+            if mb>9:
                 break
-            shopee_product[mi+68] = img
-
+            #print('mb:',mb+68)
+            shopee_product[mb+68] = img
+            mi+=1
+            mb+=1
+        fp.close()
+        print('shopee_product:',shopee_product)
         return shopee_product
 
     def __del__(self):
